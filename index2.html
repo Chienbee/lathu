@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thiệp Sinh Nhật</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #fce4ec;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .card {
+            background-color: #ffffff;
+            width: 600px;
+            border-radius: 15px;
+            padding: 40px;
+            text-align: center;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+        .card h1 {
+            color: #ec407a;
+            font-size: 48px;
+            margin-bottom: 10px;
+        }
+        .card p {
+            color: #555;
+            font-size: 20px;
+            margin-top: 10px;
+        }
+        .flowers {
+            position: absolute;
+            top: -50px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+            z-index: 1;
+        }
+        .flower {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: radial-gradient(circle, #f48fb1, #ec407a);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            animation: flower-animation 5s infinite;
+        }
+        .flower:nth-child(2) {
+            animation-delay: 1s;
+        }
+        .flower:nth-child(3) {
+            animation-delay: 2s;
+        }
+        .flower:nth-child(4) {
+            animation-delay: 3s;
+        }
+        .flower:nth-child(5) {
+            animation-delay: 4s;
+        }
+        @keyframes flower-animation {
+            0% {
+                transform: scale(1);
+                opacity: 1;
+            }
+            50% {
+                transform: scale(1.2);
+                opacity: 0.6;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+        .card .button {
+            background-color: #ec407a;
+            color: #fff;
+            padding: 15px 30px;
+            font-size: 18px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            margin-top: 20px;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+        .card .button:hover {
+            background-color: #d81b60;
+            transform: translateY(-5px);
+        }
+        .balloon {
+            width: 80px;
+            height: 120px;
+            background-color: #f06292;
+            border-radius: 50%;
+            position: absolute;
+            top: 0; left: -5px;
+            animation: float 5s ease-in-out infinite;
+        }
+        .balloon:before {
+            content: "";
+            width: 4px;
+            height: 50px;
+            background-color: #000;
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .balloon:nth-child(1) {
+            left: 50px;
+            animation-delay: 0s;
+        }
+        .balloon:nth-child(2) {
+            left: 150px;
+            animation-delay: 1s;
+        }
+        .balloon:nth-child(3) {
+            left: 250px;
+            animation-delay: 2s;
+        }
+        .balloon:nth-child(4) {
+            left: 450px;
+            animation-delay: 3s;
+        }
+        .balloon:nth-child(5) {
+            left: 615px;
+            animation-delay: 4s;
+        }
+        @keyframes float {
+            0% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="flowers">
+            <div class="flower"></div>
+            <div class="flower"></div>
+            <div class="flower"></div>
+            <div class="flower"></div>
+            <div class="flower"></div>
+        </div>
+        <h1>Chúc Mừng Sinh Nhật!</h1>
+        <p>Chúc Chị Bee, có một ngày sinh nhật thật hạnh phúc. Chúc chị tuổi mới gặp nhiều bình an 
+            trong cuộc sống công việc thuận lợi và sớm gặp được người yêu thường mình hết lòng
+        </p>
+        <a href="#" class="button">Chúc mừng!</a>
+        <div class="balloon"></div>
+        <div class="balloon"></div>
+        <div class="balloon"></div>
+        <div class="balloon"></div>
+        <div class="balloon"></div>
+    </div>
+</body>
+</html>
